@@ -7,6 +7,6 @@ Visual Pinball.
 
 - [Material Patcher](VisualPinball.MaterialPatcher) - Quickly update common materials to a bunch of tables
 
-## LICENSE
+## License
 
 [GPL-3.0](LICENSE)

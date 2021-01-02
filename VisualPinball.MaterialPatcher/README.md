@@ -18,3 +18,11 @@ Usage is pretty simple:
 ```bash
 VisualPinball.MaterialPatcher.exe <path to .mat> <.vpx or input folder> <output folder>
 ```
+
+## Compilation
+
+To get a single binary:
+
+```bash
+dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
+```

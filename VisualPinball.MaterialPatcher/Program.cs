@@ -14,7 +14,7 @@ namespace VisualPinball.MaterialPatcher
 			// validate inputs
 			try {
 				if (args.Length != 3) {
-					throw new ArgumentException("USAGE: vpe-apply-material <.mat file> <input file or folder> <output folder>");
+					throw new ArgumentException("USAGE: VisualPinball.MaterialPatcher.exe <.mat file> <input file or folder> <output folder>");
 				}
 
 				// material file

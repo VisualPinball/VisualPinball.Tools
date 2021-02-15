@@ -11,7 +11,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="VisualPinball.Engine" Version="0.0.1-preview.37" />
+	  <PackageReference Include="VisualPinball.Engine" Version="0.0.1-preview.38" />
 	</ItemGroup>
 
 </Project>

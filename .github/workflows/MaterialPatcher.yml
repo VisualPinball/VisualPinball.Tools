@@ -1,0 +1,20 @@
+name: libpinmame
+on:
+  push:
+
+jobs:
+  build-win-x64:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      - name: Build
+        run: |
+          cd VisualPinball.MaterialPatcher
+          dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
+      - uses: actions/upload-artifact@v2
+        with:
+          name: material-patcher
+          path: bin/Release/netcoreapp3.1/win-x64/publish/VisualPinball.MaterialPatcher.exe

@@ -8,6 +8,11 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{6DDE16F0-311E-403D-9D40-374990513C61}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\MaterialPatcher.yml = .github\workflows\MaterialPatcher.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +23,8 @@ Global
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DDE16F0-311E-403D-9D40-374990513C61} = {AB27DDB7-69F3-4D10-B659-76EB301A9827}
 	EndGlobalSection
 EndGlobal

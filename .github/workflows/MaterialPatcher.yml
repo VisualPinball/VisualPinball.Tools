@@ -16,7 +16,7 @@ jobs:
           dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
       - uses: actions/upload-artifact@v2
         with:
-          name: material-patcher
+          name: material-patcher-x64
           path: VisualPinball.MaterialPatcher/bin/Release/netcoreapp3.1/win-x64/publish/VisualPinball.MaterialPatcher.exe
   build-win-x86:
     runs-on: windows-latest
@@ -31,5 +31,5 @@ jobs:
           dotnet publish -r win-x86 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
       - uses: actions/upload-artifact@v2
         with:
-          name: material-patcher
+          name: material-patcher-x86
           path: VisualPinball.MaterialPatcher/bin/Release/netcoreapp3.1/win-x86/publish/VisualPinball.MaterialPatcher.exe

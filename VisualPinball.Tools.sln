@@ -1,17 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualPinball.MaterialPatcher", "VisualPinball.MaterialPatcher\VisualPinball.MaterialPatcher.csproj", "{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{AB27DDB7-69F3-4D10-B659-76EB301A9827}"
-ProjectSection(SolutionItems) = preProject
-	README.md = README.md
-	.gitignore = .gitignore
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{6DDE16F0-311E-403D-9D40-374990513C61}"
-ProjectSection(SolutionItems) = preProject
-	.github\workflows\MaterialPatcher.yml = .github\workflows\MaterialPatcher.yml
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\MaterialPatcher.yml = .github\workflows\MaterialPatcher.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualPinball.TableScript", "VisualPinball.TableScript\VisualPinball.TableScript.csproj", "{A012BD98-AE59-468A-A23D-80C04A52171E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +26,10 @@ Global
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE9DBFB-FBF8-4CEA-B221-119FABA62581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A012BD98-AE59-468A-A23D-80C04A52171E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A012BD98-AE59-468A-A23D-80C04A52171E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A012BD98-AE59-468A-A23D-80C04A52171E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A012BD98-AE59-468A-A23D-80C04A52171E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6DDE16F0-311E-403D-9D40-374990513C61} = {AB27DDB7-69F3-4D10-B659-76EB301A9827}

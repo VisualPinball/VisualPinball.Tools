@@ -6,6 +6,7 @@ Visual Pinball.
 ## Tools
 
 - [Material Patcher](VisualPinball.MaterialPatcher) - Quickly update common materials to a bunch of tables
+- [Table Script](VisualPinball.TableScript) - Quickly extract and save table scripts
 
 ## License
 

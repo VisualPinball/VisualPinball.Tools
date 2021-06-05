@@ -24,18 +24,21 @@ VisualPinball.TableScript <.vpx or input folder> [<output folder>]
 To get a single binary on Windows:
 
 ```bash
-dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
+dotnet publish -r win-x64 -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true
+```
+
+```bash
+dotnet publish -r win-x86 -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true
 ```
 
 To get a single binary on MacOS:
 
 ```bash
-dotnet publish -r osx-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
+dotnet publish -r osx-x64 -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true
 ```
-
 
 To get a single binary on Linux:
 
 ```bash
-dotnet publish -r linux-x64 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
+dotnet publish -r linux-x64 -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true
 ```

@@ -39,7 +39,7 @@ namespace VisualPinball.TableScript
 				foreach (var inputFile in inputFiles) {
 					Console.WriteLine($"Processing \"{inputFile}\"...");
 
-					var inputTable = TableLoader.Load(inputFile);
+					var inputTable = TableLoader.Load(inputFile, false);
 
 					var code = inputTable.Data.Code;
 

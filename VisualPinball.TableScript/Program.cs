@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using VisualPinball.Engine.VPT.Table;
 
@@ -41,7 +42,13 @@ namespace VisualPinball.TableScript
 
 					var inputTable = TableLoader.Load(inputFile, false);
 
-					var code = inputTable.Data.Code;
+					foreach (var item in new SortedDictionary<string, string>(inputTable.TableInfo)) {
+						if (!string.IsNullOrEmpty(item.Value)) {
+							Console.WriteLine($"[TableInfo] {item.Key}: {item.Value}");
+						}
+					}
+
+					var code = inputTable.Table.Data.Code;
 
 					if (Environment.NewLine == "\n") {
 						code = code.Replace("\r\r\n", "\n");

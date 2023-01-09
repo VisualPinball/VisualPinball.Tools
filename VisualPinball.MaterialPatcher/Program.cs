@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -55,6 +56,7 @@ namespace VisualPinball.MaterialPatcher
 
 					var inputTable = TableLoader.Load(inputFile);
 					var numMaterials = 0;
+					var newMaterials = new List<Material>();
 					foreach (var inputMaterial in inputMaterials) {
 						var outputMaterial = inputTable.GetMaterial(inputMaterial.Name);
 						if (outputMaterial != null) {
@@ -75,11 +77,19 @@ namespace VisualPinball.MaterialPatcher
 							outputMaterial.WrapLighting = inputMaterial.WrapLighting;
 							outputMaterial.UpdateData();
 							numMaterials++;
+						} else {
+							newMaterials.Add(inputMaterial);
 						}
 					}
 
+					if (newMaterials.Count > 0) {
+						inputTable.Data.Materials = inputTable.Data.Materials.Concat(newMaterials).ToArray();
+						inputTable.Data.NumMaterials = inputTable.Data.Materials.Length;
+						Console.WriteLine($"Adding non-existent materials: [ {string.Join(",", newMaterials.Select(m => m.Name))} ].");
+					}
+
 					new TableWriter(inputTable).WriteTable(outputFilePath);
-					Console.WriteLine($"Written to \"{outputFilePath}\" with {numMaterials} updated materials in {stopWatch.ElapsedMilliseconds}ms.");
+					Console.WriteLine($"Written to \"{outputFilePath}\" with {numMaterials} updated materials and {inputTable.Data.NumMaterials} added materials in {stopWatch.ElapsedMilliseconds}ms.");
 
 					stopWatch.Stop();
 					stopWatch.Reset();
